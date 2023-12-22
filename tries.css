@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .main{
     height: 100vh;
     width:100vw;
@@ -11,6 +12,11 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
+    
+    
+}
+.status-bar {
+    display: none;
 }
 .left{
     flex-basis: 50%;
@@ -18,27 +24,27 @@
 }
 .left .Logo{
     width: 77.333px;
-     height: 80px;
+    height: 80px;
     flex-shrink: 0;
     margin: 40px 0 50px;
 }
 .left h1 {
     color:  #000B0A;
-font-family: Brown;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 50px; /* 125% */
-letter-spacing: -0.8px;
-margin-bottom: 20px;
+    font-family: Brown;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px; /* 125% */
+    letter-spacing: -0.8px;
+    margin-bottom: 20px;
 }
 .left p{
-font-family: Brown;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 25px; /* 156.25% */
-width: 73%;
+    font-family: Brown;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 156.25% */
+    width: 73%;
 }
 .upfront{
     width: 100%;
@@ -46,9 +52,13 @@ width: 73%;
     margin: 50px;
     
 }
+
+         /* RIGHT */
+           
 .right{
     flex-basis: 50%;
     margin: 20px;
+
 }
 form{
     width: 580px;
@@ -64,35 +74,32 @@ form{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*border: 2px solid yellowgreen;*/
     margin-bottom: 25px;
     
 }
 .input-group{
     display: flex;
-    /*border: 2px solid gold;
-    */
     flex-direction: column;
-width:100%;
+     width:100%;
 
 }
 .lft {
     margin-left: 40px;
 }
 .input-group label {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 }
 .input-group .focus{
     border: 1.5px solid #2EC4B6;
 }
 label {
     color: #011C34;
-font-family: Sofia Pro;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-letter-spacing: 0.1px;
+    font-family: Sofia Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.1px;
 }
 input, select{
     height: 32px;
@@ -148,25 +155,62 @@ button{
     flex-direction: column;
     margin: 40px;
 }
-@media only screen and (max-width: 480px) {
-
+@media only screen and (max-width: 768px) {
+ 
+    body{
+        background-color: #F7FDFc;
+    }
     .main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding:10px;
-        width: 100vw;
-        height:1294px;
-    }
-    .left{
-        flex-basis: 100%;
-    }
-    .right{
-        flex-basis: 100%;
+        display: block;
+        padding: 0;
     }
     
-    .right .Logo{
-           margin: 0;
+    .status-bar{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;;
+        }
+    .status-bar img:first-of-type{
+            width: 20px;
+        }
+    .status-bar img:last-of-type{
+            width: 40px;
+        }
+
+    .left{
+        margin: 30px;
+    }
+
+    .left .Logo{
+        width: 42.67px;
+        height: 44px;   
+    }
+    .left h1{
+        font-family: Brown;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: -0.800000011920929px;
+        text-align: left;
+        
+    }
+    .left p {
+        font-family: Brown;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-align: left;
+        
+    }
+    
+    .right{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .right {
+      margin: 0;
     }
     .right .left{
         margin: 0;
@@ -179,15 +223,27 @@ button{
         padding: 10px;
         height: 600px;
         padding-top: 20px;
+        margin: 10px;
+    }
+    form label {
+        color: #011C34;
+        font-family: Sofia Pro;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.1px;
     }
     .input-row {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
-        
     }
+    .input-group label {
+        margin-bottom: 20px;
+    }
+
     .lft{
         display: none;
     }
